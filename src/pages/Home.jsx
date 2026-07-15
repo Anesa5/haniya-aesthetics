@@ -1,6 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
+import Services from './Services';
+
+import steps14 from "../assets/14stepshydrafacial.jpg";
+import carbon from "../assets/Carbonfacial.jpg";
+import prp from "../assets/PRP.jpg";
+import botox from "../assets/botox.jpg";
+import lipfillers from "../assets/Lipfillers.jpg";
+import fullLegs from "../assets/fullbodylaser.jpg";
+import picoLaser from "../assets/picolaser.jpg";
+import step8 from "../assets/8stepshydrafacial.jpg";
+
 
 function Home() {
     const navigate = useNavigate();
@@ -24,83 +35,78 @@ function Home() {
     }, []);
 
     const bookAppointment = () => {
-        window.open('https://wa.me/923374768957?text=Hello!%20I%20would%20like%20to%20book%20an%20appointment%20at%20Beauty%20Secrets.', '_blank');
+        window.open('https://wa.me/923104604041?text=Hello!%20I%20would%20like%20to%20book%20an%20appointment%20at%20Haniya%20Aesthetics.', '_blank');
     };
 
     const servicesList = [
         {
-            title: "At-Home Pedicure",
-            desc: "Show off perfectly polished nails with relaxing manicures and pedicures at home.",
-            image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVkaWN1cmV8ZW58MHx8MHx8fDA%3D"
+            title: "HydaFacial",
+            desc: "A refreshing facial that cleanses, hydrates, and revitalizes your skin with no downtime.",
+            image: steps14
         },
         {
-            title: "Henna Vibes",
-            desc: "Celebrate weddings and Eid with elegant, traditional mehndi designs at home.",
-            image: "https://images.unsplash.com/photo-1738849760236-541fcdd3931d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SGVuYXxlbnwwfHwwfHx8MA%3D%3D"
+            title: "Lip Fillers",
+            desc: "Restore volume and achieve beautifully shaped lips with our premium filler treatments.",
+            image: lipfillers
         },
         {
-            title: "Good Hair Day",
-            desc: "From sleek straight looks to bouncy curls every day can be a good hair day.",
-            image: "https://plus.unsplash.com/premium_photo-1664049686161-eb5f11f8cd5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z29vZCUyMGhhaXIlMjBkYXl8ZW58MHx8MHx8fDA%3D"
+            title: "Whitening Drips",
+            desc: "Enhance your natural glow with a vitamin-infused treatment that promotes healthy, luminous skin.",
+            image: prp
         },
         {
-            title: "Glow Up Facials",
-            desc: "Get brighter, smoother skin with facials that bring out your natural glow.",
-            image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&h=300&fit=crop"
+            title: "Botox",
+            desc: "Reduce the appearance of expression lines with safe, expertly administered Botox treatments.",
+            image: botox
         },
         {
-            title: "Relaxing Spa Masks",
-            desc: "Hydrate and relax with soothing face masks.",
-            image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=300&h=300&fit=crop"
+            title: "Laser Hair Removal",
+            desc: "Experience advanced laser treatments for lasting hair reduction and renewed confidence.",
+            image: fullLegs
         },
         {
-            title: "Waxing Wonders",
-            desc: "Smooth and flawless skin with our gentle waxing services.",
-            image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=300&h=300&fit=crop"
+            title: "Pico Laser",
+            desc: "A non-invasive laser treatment designed to improve skin texture and promote a radiant complexion.",
+            image: picoLaser
         },
         {
-            title: "Party Makeup",
-            desc: "Get the perfect party look that lasts all night.",
-            image: "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=300&h=300&fit=crop"
+            title: "Carbon Facial",
+            desc: "Revitalize your skin with a Carbon Facial for a clearer, smoother, and more even complexion.",
+            image: carbon
         }
     ];
 
-    const statsData = [
-        {
-            icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>,
-            number: "250+",
-            label: "Professionals"
-        },
-        {
-            icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>,
-            number: "100K+",
-            label: "Bookings"
-        },
-        {
-            icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>,
-            number: "7+",
-            label: "Cities"
-        },
-        {
-            icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>,
-            number: "4.8",
-            label: "Rating on Google Maps"
-        },
-    ];
 
     const faqs = [
-        { q: "How do I book a service?", a: "Choose your desired service on our website or tap the WhatsApp icon to book instantly via WhatsApp." },
-        { q: "What areas do you serve?", a: "We serve Lahore, Faisalabad, Multan, Islamabad, Rawalpindi, Sialkot, Karachi." },
-        { q: "Are the beauticians trained and professional?", a: "All Beauty Secrets professionals are fully trained and vetted, including medical checks and police verification." },
-        { q: "Do I need to arrange anything at home?", a: "Not at all! We manage everything, so you can just relax and enjoy." }
+        {
+            q: "What treatments do you offer?",
+            a: "We offer a range of advanced aesthetic treatments including HydraFacial, Botox, Dermal Fillers, Laser Hair Removal, Pico Laser, Carbon Facial, IV Drips, and professional skincare solutions."
+        },
+        {
+            q: "Are your treatments safe?",
+            a: "Yes. All treatments are performed by qualified professionals using FDA-approved equipment and premium-quality products, following the highest safety standards."
+        },
+        {
+            q: "Do I need a consultation before treatment?",
+            a: "Yes. We recommend a personalized consultation to assess your skin, discuss your goals, and recommend the most suitable treatment plan."
+        },
+        {
+            q: "Is there any downtime after the treatments?",
+            a: "Most of our treatments require little to no downtime, allowing you to return to your daily activities shortly after your appointment. Recovery time may vary depending on the procedure."
+        },
+        {
+            q: "How can I book an appointment?",
+            a: "You can easily book your appointment through our website, call our clinic, or contact us via WhatsApp for quick assistance."
+        }
     ];
 
     const galleryImages = [
-        "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=400&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1560869713-7d0a2943084e?w=400&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1610998342124-c4cba74058f4?w=400&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1519419169698-bde7f1f44710?w=400&h=400&fit=crop"
+        steps14,
+        carbon,
+        prp,
+        botox,
+        lipfillers,
+        fullLegs,
     ];
 
     return (
@@ -111,27 +117,44 @@ function Home() {
                 <div className="hero-bg"></div>
                 <div className="hero-container">
                     <div className="hero-content">
-                        <h1>Why Step Out, When<br />Beauty Comes to <span className="highlight">YOU</span>?</h1>
-                        <p>Professional beauty services at your doorstep.</p>
+                        <h1>Elevating Confidence Through Expert Aesthetics</h1>
+
                         <button className="book-btn hero-btn" onClick={bookAppointment}>Book Now</button>
                     </div>
                 </div>
             </section>
 
-            {/* Stats Section - Separate Section with Icons */}
-            <section className="stats-section">
+            {/* ================= ABOUT US SECTION ================= */}
+            <section className="about-home-section">
                 <div className="container">
-                    <div className="stats-row">
-                        {statsData.map((stat, index) => (
-                            <div key={index} className="stat-item">
-                                <div className="stat-icon">{stat.icon}</div>
-                                <span className="stat-number">{stat.number}</span>
-                                <span className="stat-label">{stat.label}</span>
-                            </div>
-                        ))}
+                    <div className="about-home-grid">
+                        <div className="about-home-content animate-on-scroll">
+                            <span className="section-tag">ABOUT US</span>
+                            <h2>Your Trusted Partner in <span>Aesthetic Excellence</span></h2>
+                            <p>
+                                Haniya Aesthetics is a leading aesthetic clinic in Lahore committed to enhancing natural beauty through expert care and advanced skin treatments. Our mission is to help every client achieve healthy, radiant skin with safe, effective, and customized aesthetic solutions.
+                            </p>
+                            <p>
+                                Our team of experienced dermatologists and skincare professionals uses the latest technologies to deliver personalized treatments designed around your unique needs. At Haniya Aesthetics, we believe that confidence starts with healthy skin, and every client deserves exceptional care in a welcoming and professional environment.
+                            </p>
+                            <button className="about-home-btn" onClick={() => navigate('/about')}>Learn More →</button>
+                        </div>
+                        <div className="about-home-image animate-on-scroll">
+                            <img
+                                src={step8}
+                                alt="Haniya Aesthetics Clinic"
+                            />
+
+                        </div>
                     </div>
                 </div>
             </section>
+
+            {/* ================= SERVICES COMPONENT ================= */}
+            <div className="home-services-wrapper">
+                <Services />
+            </div>
+
 
             {/* Luxury Treatments Section - Left aligned content, enlarged images, no lines */}
             <section className="luxury-treatments">
@@ -141,8 +164,9 @@ function Home() {
                         {/* Left Side - Complete Left Alignment */}
                         <div className="left-content animate-on-scroll">
                             <span className="section-tag" style={{ background: "transparent", color: "color:black" }}>Luxury Treatments</span>
-                            <h2>Glow Like Never<br />Before, Right at<br />Home</h2>
-                            <p>No salon queues, no hassle just pure elegance <br />delivered to your doorstep.</p>
+                            <h2>Enhance Your Natural Beauty,
+                                With Expert Aesthetic Care</h2>
+                            <p>Personalized aesthetic treatments designed to enhance your natural beauty with precision, care, and excellence.</p>
                             <button className="view-all-btn" onClick={() => navigate('/services')}>View all services →</button>
                         </div>
 
@@ -166,39 +190,12 @@ function Home() {
                 </div>
             </section>
 
-            {/* Bridal Section with Background */}
-            <section className="bridal-section">
-                <div className="bridal-overlay"></div>
-                <div className="bridal-bg"></div>
-                <div className="bridal-container">
-                    <div className="bridal-content animate-on-scroll">
-                        <h2>From Mehndi to Walima</h2>
-                        <p className="bridal-subtitle">Complete Bridal Beauty, At Home</p>
-                        <div className="bridal-features">
-                            <div className="bridal-feature">
-                                <span className="check">✓</span>
-                                <span>Professional service</span>
-                            </div>
-                            <div className="bridal-feature">
-                                <span className="check">✓</span>
-                                <span>High quality products</span>
-                            </div>
-                            <div className="bridal-feature">
-                                <span className="check">✓</span>
-                                <span>100% satisfaction</span>
-                            </div>
-                        </div>
-                        <button className="book-btn bridal-btn" onClick={() => navigate('/contact')}>Reach us</button>
-                    </div>
-                </div>
-            </section>
-
             {/* How It Works Section */}
             <section className="how-it-works">
                 <div className="container">
                     <div className="section-header animate-on-scroll">
                         <span className="section-badge">Simple Process</span>
-                        <h2>How Beauty <span className="highlight">Secrets</span> Works</h2>
+                        <h2>How Haniya <span className="highlight">Aesthetics</span> Works</h2>
                         <p>Your beauty journey in 3 easy steps — professional service at your doorstep</p>
                     </div>
 
@@ -507,7 +504,74 @@ function Home() {
     `}</style>
             </section>
 
-            {/* FAQ Section */}
+            {/* ================= GALLERY SECTION (MOVED UP) ================= */}
+            <section className="gallery-section">
+                <div className="container">
+                    <div className="section-header animate-on-scroll">
+                        <h2>Our Aesthetic Gallery</h2>
+                        <p>Explore our advanced aesthetic treatments and beautiful results.</p>
+
+                        <button
+                            className="instagram-btn"
+                            onClick={() => window.open("https://instagram.com", "_blank")}
+                        >
+                            Follow us on Instagram →
+                        </button>
+                    </div>
+
+                    <div className="gallery-masonry">
+                        <div className="gallery-col">
+                            <div className="gallery-item large">
+                                <img src={steps14} alt="HydraFacial" />
+                                <div className="gallery-overlay">
+                                    <p>HydraFacial</p>
+                                </div>
+                            </div>
+
+                            <div className="gallery-item">
+                                <img src={carbon} alt="Carbon Facial" />
+                                <div className="gallery-overlay">
+                                    <p>Carbon Facial</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="gallery-col">
+                            <div className="gallery-item">
+                                <img src={prp} alt="PRP Therapy" />
+                                <div className="gallery-overlay">
+                                    <p>PRP Therapy</p>
+                                </div>
+                            </div>
+
+                            <div className="gallery-item large">
+                                <img src={botox} alt="Botox" />
+                                <div className="gallery-overlay">
+                                    <p>Botox</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="gallery-col">
+                            <div className="gallery-item">
+                                <img src={lipfillers} alt="Lip Fillers" />
+                                <div className="gallery-overlay">
+                                    <p>Lip Fillers</p>
+                                </div>
+                            </div>
+
+                            <div className="gallery-item">
+                                <img src={fullLegs} alt="Laser Hair Removal" />
+                                <div className="gallery-overlay">
+                                    <p>Laser Hair Removal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ================= FAQ SECTION (MOVED DOWN) ================= */}
             <section className="faq-section">
                 <div className="container">
                     <div className="section-header animate-on-scroll">
@@ -528,69 +592,6 @@ function Home() {
                 </div>
             </section>
 
-            {/* Gallery Section - Masonry Style */}
-            <section className="gallery-section">
-                <div className="container">
-                    <div className="section-header animate-on-scroll">
-                        <h2>Our Beauty Moments</h2>
-                        <p>See the glow, straight from our Social Media.</p>
-                        <button className="instagram-btn" onClick={() => window.open('https://instagram.com', '_blank')}>
-                            Follow us on Instagram →
-                        </button>
-                    </div>
-
-                    <div className="gallery-masonry">
-                        <div className="gallery-col">
-                            <div className="gallery-item large">
-                                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&h=1000&fit=crop" alt="Bridal makeup" />
-                                <div className="gallery-overlay">
-
-                                    <p>Bridal Glamour</p>
-                                </div>
-                            </div>
-                            <div className="gallery-item">
-                                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=600&fit=crop" alt="Manicure" />
-                                <div className="gallery-overlay">
-
-                                    <p>Nail Perfection</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="gallery-col">
-                            <div className="gallery-item">
-                                <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=600&h=600&fit=crop" alt="Hair styling" />
-                                <div className="gallery-overlay">
-
-                                    <p>Hair Magic</p>
-                                </div>
-                            </div>
-                            <div className="gallery-item large">
-                                <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=1000&fit=crop" alt="Facial" />
-                                <div className="gallery-overlay">
-
-                                    <p>Glow Up</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="gallery-col">
-                            <div className="gallery-item">
-                                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&h=600&fit=crop" alt="Bridal" />
-                                <div className="gallery-overlay">
-
-                                    <p>Bridal Edition</p>
-                                </div>
-                            </div>
-                            <div className="gallery-item">
-                                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&h=600&fit=crop" alt="Spa" />
-                                <div className="gallery-overlay">
-
-                                    <p>Spa Bliss</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     );
 }

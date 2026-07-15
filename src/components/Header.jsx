@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Header.css';
+import logo from '../assets/Haniya Aesthetics.png';
 
 function Header() {
     const location = useLocation();
@@ -16,15 +17,18 @@ function Header() {
     }, []);
 
     const bookAppointment = () => {
-        window.open('https://wa.me/923374768957?text=Hello!%20I%20would%20like%20to%20book%20an%20appointment%20at%20Beauty%20Secrets.', '_blank');
+        window.open('https://wa.me/923104604041?text=Hello!%20I%20would%20like%20to%20book%20an%20appointment%20at%20Beauty%20Secrets.', '_blank');
     };
 
     return (
         <header className={`header ${scrolled ? 'scrolled' : ''}`}>
             <div className="header-container">
                 <Link to="/" className="logo">
-                    <span className="logo-name">Beauty</span>
-                    <span className="logo-accent">Secrets</span>
+                    <img src={logo} alt="Haniya Aesthetics" className="logo-image" />
+                    <div className="logo-text">
+                        <span className="logo-name">Haniya</span>
+                        <span className="logo-accent">Aesthetics</span>
+                    </div>
                 </Link>
 
                 <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>

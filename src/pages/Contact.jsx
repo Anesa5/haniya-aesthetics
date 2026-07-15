@@ -99,7 +99,7 @@ Please respond to this inquiry.`;
                 <div className="hero-backdrop"></div>
                 <div className="hero-content">
                     <div className="hero-badge">✦ LET'S CONNECT ✦</div>
-                    <h1>We'd Love to <span className="gradient-text">Hear From You</span></h1>
+                    <h1>We'd Love to <span className="gradient-text">Connect with you</span></h1>
                     <p>Your beauty journey begins with a conversation</p>
                 </div>
                 <div className="hero-wave">
@@ -138,15 +138,7 @@ Please respond to this inquiry.`;
                             </div>
 
                             {/* Social Links */}
-                            <div className="social-links-section">
-                                <h3>Follow Us</h3>
-                                <div className="social-icons">
-                                    <a href="#" className="social-icon instagram">📷</a>
-                                    <a href="#" className="social-icon facebook">📘</a>
-                                    <a href="#" className="social-icon tiktok">🎵</a>
-                                    <a href="#" className="social-icon pinterest">📌</a>
-                                </div>
-                            </div>
+
                         </div>
 
                         {/* Right Side - Contact Form */}
@@ -254,28 +246,7 @@ Please respond to this inquiry.`;
             </div>
 
             {/* Map Section - Updated with Lahore Wapda Town Location */}
-            <div className="map-section">
-                <div className="map-overlay"></div>
-                <div className="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217801.63880807197!2d74.19826915742604!3d31.482349349538138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903f6e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sWapda%20Town%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
-                        width="100%"
-                        height="400"
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        title="Beauty Secrets Location - Wapda Town Lahore"
-                    ></iframe>
-                </div>
-                <div className="map-card">
-                    <div className="map-card-icon">📍</div>
-                    <h4>Find Us Here</h4>
-                    <p>Wapda, Block E2 Block E 2 Wapda Town Phase 1 Town, Lahore, 54000</p>
-                    <button onClick={() => window.open('https://maps.google.com/?q=Wapda+Town+Phase+1+Lahore', '_blank')} className="map-btn">
-                        Get Directions →
-                    </button>
-                </div>
-            </div>
+
 
             {/* CTA Section */}
             <div className="contact-cta-premium">
