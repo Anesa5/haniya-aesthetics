@@ -28,7 +28,7 @@
     padding-top: 50px;
 }
 
-.gradient-text {
+.gradient-text-services {
     background: #A87A6A;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -686,4 +686,61 @@
     .confirmation-card {
         padding: 16px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Make sure the hero section doesn't take too much space */
+.booking-hero {
+    min-height: 200px;
+    /* or adjust as needed */
+    padding: 40px 20px;
+
+}
+
+/* Ensure step container starts from the top */
+.step-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 40px;
+    /* Remove any margin-top that might be pushing it down */
+}
+
+/* Make services grid start from top */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 0;
+    /* Remove any margin-top */
+    padding-top: 0;
+    /* Remove any padding-top */
+}
+
+/* For the main container */
+.services-booking-page {
+    min-height: 100vh;
+    background: #f8f9fa;
+    padding-top: 0;
+    /* Remove any padding-top */
 }

@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import "./About.css";
-import img1 from '../assets/doctor1.jpg';
-import img2 from '../assets/doctor2.jpg';
-import img3 from '../assets/doctor3.jpg';
+
 import hydra from '../assets/8stepshydrafacial.jpg';
 
 function About() {
@@ -28,7 +26,7 @@ function About() {
 
     const bookAppointment = () => {
         window.open(
-            "https://wa.me/923374768957?text=Hello! I would like to book an appointment at Haniya Aesthetics Clinic.",
+            "https://wa.me/923104604041?text=Hello! I would like to book an appointment at Haniya Aesthetics Clinic.",
             "_blank"
         );
     };
@@ -329,53 +327,7 @@ function About() {
             </section>
             {/* ================= OUR SPECIALISTS ================= */}
 
-            <section className="team-section">
 
-                <div className="container">
-
-                    <div className="section-heading animate-on-scroll">
-                        <span>OUR EXPERTS</span>
-                        <h2>Meet Our Specialists</h2>
-                        <p>
-                            Our experienced team is dedicated to delivering exceptional
-                            aesthetic treatments with professionalism, precision, and care.
-                        </p>
-                    </div>
-
-                    <div className="team-grid">
-
-                        {[
-                            {
-                                name: "Dr. Haniya",
-                                role: "Aesthetic Physician",
-                                image: img1,
-                            },
-                            {
-                                name: "Dr. Sarah",
-                                role: "Skin Specialist",
-                                image: img2,
-                            },
-                            {
-                                name: "Dr. Ayesha",
-                                role: "Laser Therapist",
-                                image: img3,
-                            },
-                        ].map((member, index) => (
-                            <div className="team-card animate-on-scroll" key={index}>
-                                <img src={member.image} alt={member.name} />
-
-                                <div className="team-content">
-                                    <h3>{member.name}</h3>
-                                    <p>{member.role}</p>
-                                </div>
-                            </div>
-                        ))}
-
-                    </div>
-
-                </div>
-
-            </section>
 
             {/* ================= TESTIMONIALS ================= */}
 

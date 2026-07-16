@@ -259,7 +259,7 @@ function Services() {
     };
 
     const handleProceed = () => {
-        const message = `Hello! I would like to book an appointment for:
+        const message = `Hi! I want to book an appointment at Haniya Aesthetics.
         Service: ${selectedService.name}
         Original Price: PKR ${selectedService.price.toLocaleString()}
         Discounted Price: PKR ${selectedService.discountedPrice.toLocaleString()}
@@ -271,7 +271,7 @@ function Services() {
         
         Please confirm my booking.`;
 
-        window.open(`https://wa.me/923374768957?text=${encodeURIComponent(message)}`, '_blank');
+        window.open(`https://wa.me/923104604041?text=${encodeURIComponent(message)}`, '_blank');
     };
 
     const handleBack = () => {
@@ -322,7 +322,7 @@ function Services() {
         <div className="services-booking-page">
             <div className="booking-hero">
                 <div className="booking-hero-content">
-                    <h1>Select Your <span className="gradient-text">Service</span></h1>
+                    <h1>Select Your <span className="gradient-text-services">Service</span></h1>
                     <p>Choose from our curated collection of luxury treatments</p>
                     <div className="hero-steps">
                         <div className={`step-indicator ${step >= 1 ? 'active' : ''}`}>

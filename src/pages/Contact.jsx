@@ -51,7 +51,7 @@ function Contact() {
 └─────────────────────────────┘
 Please respond to this inquiry.`;
 
-        window.open(`https://wa.me/923374768957?text=${encodeURIComponent(message)}`, '_blank');
+        window.open(`https://wa.me/923104604041?text=${encodeURIComponent(message)}`, '_blank');
 
         setTimeout(() => {
             setIsSubmitting(false);
@@ -60,7 +60,7 @@ Please respond to this inquiry.`;
     };
 
     const bookAppointment = () => {
-        window.open('https://wa.me/923374768957?text=✨ I would like to book an appointment at Beauty Secrets. Please share available slots. ✨', '_blank');
+        window.open('https://wa.me/923104604041?text=✨ I would like to book an appointment at Haniya-Aesthetics. Please share available slots. ✨', '_blank');
     };
 
     const services = [
@@ -76,21 +76,15 @@ Please respond to this inquiry.`;
     ];
 
     const contactInfo = [
-        { icon: "📍", title: "Visit Us", details: ["Wapda, Block E2", "Block E 2 Wapda Town Phase 1", "Town, Lahore, 54000"], color: "#FF6B8A" },
-        { icon: "📞", title: "Call Us", details: ["+92 337 4768957", "24/7 Support"], color: "#FF9EB5" },
-        { icon: "✉️", title: "Email Us", details: ["info@beautysecrets.com", "Response within 24h"], color: "#FFB6C1" },
+        { icon: "📍", title: "Visit Us", details: ["  89C, Main Road Punjab Govt Housing Society, near Wapda Town, Lahore, 54000"], color: "#FF6B8A" },
+        { icon: "📞", title: "Call Us", details: ["+92  3104604041", "24/7 Support"], color: "#FF9EB5" },
+
         { icon: "⏰", title: "Working Hours", details: ["Mon-Sat: 10AM - 8PM", "Sun: 12PM - 6PM"], color: "#FFC0CB" }
     ];
 
     // Lahore Wapda Town coordinates
-    const mapLocation = {
-        address: "Wapda, Block E2 Block E 2 Wapda Town Phase 1 Town, Lahore, 54000",
-        lat: "31.4321",
-        lng: "74.3219"
-    };
 
-    // Google Maps embed URL for Lahore Wapda Town location
-    const mapEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.123456789012!2d74.3189!3d31.4298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919041e8e5e5e5e%3A0x0!2sWapda%20Town%20Phase%201%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1`;
+
 
     return (
         <div className="contact-page-premium">
