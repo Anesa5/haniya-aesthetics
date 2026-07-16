@@ -259,7 +259,7 @@ function Services() {
     };
 
     const handleProceed = () => {
-        const message = `Hi! I want to book an appointment at Haniya Aesthetics.
+        const message = `Hello! I would like to book an appointment for:
         Service: ${selectedService.name}
         Original Price: PKR ${selectedService.price.toLocaleString()}
         Discounted Price: PKR ${selectedService.discountedPrice.toLocaleString()}
@@ -322,7 +322,7 @@ function Services() {
         <div className="services-booking-page">
             <div className="booking-hero">
                 <div className="booking-hero-content">
-                    <h1>Select Your <span className="gradient-text-services">Service</span></h1>
+                    <h1>Select Your <span className="gradient-text-service">Service</span></h1>
                     <p>Choose from our curated collection of luxury treatments</p>
                     <div className="hero-steps">
                         <div className={`step-indicator ${step >= 1 ? 'active' : ''}`}>
@@ -350,8 +350,6 @@ function Services() {
 
             {step === 1 && (
                 <div className="step-container">
-
-
                     <div className="services-grid">
                         {services.map((service) => (
                             <div
@@ -374,11 +372,11 @@ function Services() {
                                     <button
                                         className="card-more-btn"
                                         onClick={(e) => {
-                                            e.stopPropagation();
-                                            navigate('/services');
+                                            e.stopPropagation(); // Card ke click ko rokta hai
+                                            handleServiceSelect(service); // ← YAHAN CHANGE KIYA
                                         }}
                                     >
-                                        More Info →
+                                        Book Now →
                                     </button>
                                 </div>
                             </div>
