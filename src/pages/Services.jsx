@@ -84,7 +84,7 @@ function Services() {
         },
         {
             id: 6,
-            name: "Botox",
+            name: "Anti-aging treatment",
             price: 20000,
             discountedPrice: 12000,
             description: "Professional anti-aging treatment for smooth, youthful-looking skin",

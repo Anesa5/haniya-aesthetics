@@ -355,7 +355,7 @@ function About() {
                             {
                                 name: "Fatima Ali",
                                 review:
-                                    "I had Botox treatment here and the results were incredibly natural. Highly recommended for anyone looking for expert aesthetic care.",
+                                    "I had Anti-aging treatment here and the results were incredibly natural. Highly recommended for anyone looking for expert aesthetic care.",
                             },
                             {
                                 name: "Sana Ahmed",

@@ -55,8 +55,8 @@ function Home() {
             image: prp
         },
         {
-            title: "Botox",
-            desc: "Reduce the appearance of expression lines with safe, expertly administered Botox treatments.",
+            title: "Anti-aging treatment",
+            desc: "Reduce the appearance of expression lines with safe, expertly administered Anti-aging treatments.",
             image: botox
         },
         {
@@ -111,6 +111,15 @@ function Home() {
 
     return (
         <div className="home">
+            <a
+                href="tel:+923104604041"
+                className="floating-call-btn"
+                aria-label="Call Haniya Aesthetics"
+            >
+                <span className="call-icon">📞</span>
+                <span className="call-text">Call Now</span>
+            </a>
+            {/* Hero Section - Full Width with Left Alignment */}
             {/* Hero Section - Full Width with Left Alignment */}
             <section className="hero">
                 <div className="hero-overlay"></div>
@@ -547,7 +556,7 @@ function Home() {
                             <div className="gallery-item large">
                                 <img src={botox} alt="Botox" />
                                 <div className="gallery-overlay">
-                                    <p>Botox</p>
+                                    <p>Anti-aging treatment</p>
                                 </div>
                             </div>
                         </div>

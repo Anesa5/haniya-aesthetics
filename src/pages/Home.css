@@ -1331,3 +1331,177 @@
         display: none;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   FLOATING CALL BUTTON
+========================= */
+
+.floating-call-btn {
+    position: fixed;
+    left: 22px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    background: #c7a17a;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    z-index: 99999;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.18),
+        0 0 0 5px rgba(199, 161, 122, 0.15);
+
+    transition: all 0.35s ease;
+
+    animation: callPulse 2s infinite;
+}
+
+/* Phone Icon */
+
+.call-icon {
+    font-size: 25px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Call Now Text */
+
+.call-text {
+    position: absolute;
+
+    left: 68px;
+
+    background: #2c241a;
+    color: #ffffff;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(-8px);
+
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+
+.floating-call-btn:hover {
+    background: #b58a5c;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.22),
+        0 0 0 6px rgba(199, 161, 122, 0.18);
+
+    color: #ffffff;
+}
+
+.floating-call-btn:hover .call-icon {
+    transform: rotate(-12deg) scale(1.1);
+}
+
+.floating-call-btn:hover .call-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+/* =========================
+   PULSE ANIMATION
+========================= */
+
+@keyframes callPulse {
+
+    0% {
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.18),
+            0 0 0 0 rgba(199, 161, 122, 0.45);
+    }
+
+    70% {
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.18),
+            0 0 0 12px rgba(199, 161, 122, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.18),
+            0 0 0 0 rgba(199, 161, 122, 0);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .floating-call-btn {
+        width: 52px;
+        height: 52px;
+
+        left: 16px;
+        bottom: 18px;
+    }
+
+    .call-icon {
+        font-size: 22px;
+    }
+
+    .call-text {
+        display: none;
+    }
+}
